@@ -1,7 +1,6 @@
 import express from 'express';
 import { PORT, mongoDBURL } from './config.js';
 import mongoose from 'mongoose';
-import { Book } from './models/bookModel.js';
 import booksRoute from './routes/booksRoute.js';
 import cors from 'cors';
 
@@ -12,7 +11,7 @@ app.use(express.json());
 
 app.get('/', (request, response) => {
   console.log(request);
-  return response.status(234).send('Welcome to MERN Tutorial');
+  return response.status(200).send('Welcome to MERN Tutorial');
 });
 
 app.use('/books', booksRoute);
@@ -30,4 +29,5 @@ mongoose
   });
 
 export default app;
+
 
