@@ -30,4 +30,4 @@ mongoose
     console.log(error);
 
  })
-module.exports=app;
+export default app;
