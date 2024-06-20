@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (request, response) => {
-  console.log(request);
+  console.log('Received request on /');
   return response.status(200).send('Welcome to MERN Tutorial');
 });
 
@@ -25,9 +25,8 @@ mongoose
     });
   })
   .catch((error) => {
-    console.log(error);
+    console.error('Database connection error:', error);
+    process.exit(1); // Exit the process with an error code
   });
 
 export default app;
-
-
