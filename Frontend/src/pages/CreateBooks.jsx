@@ -20,7 +20,7 @@ const CreateBooks = () => {
       publishYear
     };
     setLoading(true);
-    axios.post('http://localhost:5555/books',data)
+    axios.post('https://bookstore-mern-seven.vercel.app/books',data)
     .then(()=>{
       setLoading(false);
       enqueueSnackbar('Book Created Successfully.',{variant:'success'})
